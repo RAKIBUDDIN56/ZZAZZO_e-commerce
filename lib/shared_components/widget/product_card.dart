@@ -5,7 +5,7 @@ import 'package:rakibuddin560p/features/model/products_model.dart';
 class ProductCard extends StatelessWidget {
   final ProductModel product;
   // final ValueChanged<Product> onSelected;
-  ProductCard(
+  const ProductCard(
     this.product,
   );
 
@@ -15,7 +15,7 @@ class ProductCard extends StatelessWidget {
         //  padding: EdgeInsets.only(left: 20, right: 10),
         height: 300,
         // width: 200,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: ConstandColor.background,
           borderRadius: BorderRadius.all(Radius.circular(20)),
           boxShadow: <BoxShadow>[
@@ -23,14 +23,14 @@ class ProductCard extends StatelessWidget {
                 color: Color(0xfff8f8f8), blurRadius: 15, spreadRadius: 10),
           ],
         ),
-        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+        margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
         child: Stack(
           // alignment: Alignment.center,
           children: <Widget>[
             Positioned(
               right: 0,
               child: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   Icons.favorite_border,
                   color: Colors.red,
                 ),
@@ -41,8 +41,8 @@ class ProductCard extends StatelessWidget {
                 left: 4,
                 top: 4,
                 child: Container(
-                  padding: EdgeInsets.all(3),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(3),
+                  decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 140, 227, 228),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
@@ -50,14 +50,8 @@ class ProductCard extends StatelessWidget {
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10),
                     ),
-                    // boxShadow: <BoxShadow>[
-                    //   BoxShadow(
-                    //       color: Color(0xfff8f8f8),
-                    //       blurRadius: 15,
-                    //       spreadRadius: 10),
-                    // ],
                   ),
-                  child: Text(
+                  child: const Text(
                     '30%',
                     style: TextStyle(
                         color: Colors.black,
@@ -81,7 +75,7 @@ class ProductCard extends StatelessWidget {
                 product.title!,
                 softWrap: true,
                 // textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 14),
               ),
             ),
             Positioned(
@@ -91,23 +85,23 @@ class ProductCard extends StatelessWidget {
                     Text(
                       '\$ ${product.price.toString()}',
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
                         Text(
                           product.rating!.rate.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 14),
